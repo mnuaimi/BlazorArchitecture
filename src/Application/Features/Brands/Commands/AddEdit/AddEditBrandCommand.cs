@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Domain.Entities.Catalog;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Constants.Application;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit
+namespace HelpDesk.Architecture.Application.Features.Brands.Commands.AddEdit
 {
     public partial class AddEditBrandCommand : IRequest<Result<int>>
     {

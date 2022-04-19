@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace BlazorHero.CleanArchitecture.Application.Extensions
+namespace HelpDesk.Architecture.Application.Extensions
 {
     public static class PredicateBuilder
     {

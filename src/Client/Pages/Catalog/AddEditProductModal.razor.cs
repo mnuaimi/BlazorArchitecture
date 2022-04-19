@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using HelpDesk.Architecture.Application.Features.Brands.Queries.GetAll;
+using HelpDesk.Architecture.Application.Features.Products.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Requests;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -13,10 +13,10 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Product;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Catalog.Brand;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Catalog.Product;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
+namespace HelpDesk.Architecture.Client.Pages.Catalog
 {
     public partial class AddEditProductModal
     {

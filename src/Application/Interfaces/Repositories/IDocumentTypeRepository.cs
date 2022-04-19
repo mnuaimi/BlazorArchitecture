@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Interfaces.Repositories
+﻿namespace HelpDesk.Architecture.Application.Interfaces.Repositories
 {
     public interface IDocumentTypeRepository
     {

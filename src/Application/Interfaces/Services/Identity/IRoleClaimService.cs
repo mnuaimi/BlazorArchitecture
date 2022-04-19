@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Common;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity
+namespace HelpDesk.Architecture.Application.Interfaces.Services.Identity
 {
     public interface IRoleClaimService : IService
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Domain.Contracts
+namespace HelpDesk.Architecture.Domain.Contracts
 {
     public abstract class AuditableEntity<TId> : IAuditableEntity<TId>
     {

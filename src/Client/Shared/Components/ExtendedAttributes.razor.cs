@@ -1,8 +1,8 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Contracts;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared.Components
+namespace HelpDesk.Architecture.Client.Shared.Components
 {
     public abstract partial class ExtendedAttributes<TId, TEntityId, TEntity, TExtendedAttribute>
         : ExtendedAttributesBase<TId, TEntityId, TEntity, TExtendedAttribute>

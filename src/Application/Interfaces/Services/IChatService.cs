@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Application.Models.Chat;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace HelpDesk.Architecture.Application.Interfaces.Services
 {
     public interface IChatService
     {

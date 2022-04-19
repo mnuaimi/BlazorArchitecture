@@ -1,5 +1,5 @@
-﻿using BlazorHero.CleanArchitecture.Application.Exceptions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Exceptions;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Middlewares
+namespace HelpDesk.Architecture.Server.Middlewares
 {
     public class ErrorHandlerMiddleware
     {

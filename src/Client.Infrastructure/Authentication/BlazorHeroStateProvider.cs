@@ -1,6 +1,6 @@
 ﻿using Blazored.LocalStorage;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Shared.Constants.Storage;
 using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;
@@ -11,14 +11,14 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Authentication
+namespace HelpDesk.Architecture.Client.Infrastructure.Authentication
 {
-    public class BlazorHeroStateProvider : AuthenticationStateProvider
+    public class HelpDeskStateProvider : AuthenticationStateProvider
     {
         private readonly HttpClient _httpClient;
         private readonly ILocalStorageService _localStorage;
 
-        public BlazorHeroStateProvider(
+        public HelpDeskStateProvider(
             HttpClient httpClient,
             ILocalStorageService localStorage)
         {

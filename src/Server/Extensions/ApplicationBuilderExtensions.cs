@@ -1,19 +1,19 @@
 ﻿using System.Globalization;
 using System.Linq;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Server.Hubs;
-using BlazorHero.CleanArchitecture.Server.Middlewares;
-using BlazorHero.CleanArchitecture.Shared.Constants.Localization;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Server.Hubs;
+using HelpDesk.Architecture.Server.Middlewares;
+using HelpDesk.Architecture.Shared.Constants.Localization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Application.Configurations;
+using HelpDesk.Architecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Application.Configurations;
 using Microsoft.Extensions.Configuration;
 
-namespace BlazorHero.CleanArchitecture.Server.Extensions
+namespace HelpDesk.Architecture.Server.Extensions
 {
     internal static class ApplicationBuilderExtensions
     {

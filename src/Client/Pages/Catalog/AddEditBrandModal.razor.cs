@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand;
+using HelpDesk.Architecture.Application.Features.Brands.Commands.AddEdit;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Catalog.Brand;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
+namespace HelpDesk.Architecture.Client.Pages.Catalog
 {
     public partial class AddEditBrandModal
     {

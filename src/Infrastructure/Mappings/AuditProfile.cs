@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Audit;
-using BlazorHero.CleanArchitecture.Application.Responses.Audit;
+using HelpDesk.Architecture.Infrastructure.Models.Audit;
+using HelpDesk.Architecture.Application.Responses.Audit;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Mappings
+namespace HelpDesk.Architecture.Infrastructure.Mappings
 {
     public class AuditProfile : Profile
     {

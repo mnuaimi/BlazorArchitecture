@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Products.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Commands.Delete;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Queries.GetAllPaged;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Queries.GetProductImage;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+﻿using HelpDesk.Architecture.Application.Features.Products.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Features.Products.Commands.Delete;
+using HelpDesk.Architecture.Application.Features.Products.Queries.Export;
+using HelpDesk.Architecture.Application.Features.Products.Queries.GetAllPaged;
+using HelpDesk.Architecture.Application.Features.Products.Queries.GetProductImage;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.v1.Catalog
+namespace HelpDesk.Architecture.Server.Controllers.v1.Catalog
 {
     public class ProductsController : BaseApiController<ProductsController>
     {

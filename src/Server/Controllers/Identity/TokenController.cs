@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.Identity
+namespace HelpDesk.Architecture.Server.Controllers.Identity
 {
     [Route("api/identity/token")]
     [ApiController]

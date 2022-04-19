@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage.Provider
+namespace HelpDesk.Architecture.Application.Interfaces.Services.Storage.Provider
 {
     public interface IStorageProvider
     {

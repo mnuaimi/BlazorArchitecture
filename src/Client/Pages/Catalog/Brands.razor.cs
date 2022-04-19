@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Brands.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using HelpDesk.Architecture.Application.Features.Brands.Queries.GetAll;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
@@ -9,17 +9,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Brand;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Application.Features.Brands.Commands.AddEdit;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Catalog.Brand;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
-using BlazorHero.CleanArchitecture.Application.Features.Brands.Commands.Import;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Client.Shared.Components;
+using HelpDesk.Architecture.Application.Features.Brands.Commands.Import;
+using HelpDesk.Architecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Requests;
+using HelpDesk.Architecture.Client.Shared.Components;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Catalog
+namespace HelpDesk.Architecture.Client.Pages.Catalog
 {
     public partial class Brands
     {

@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Routes
+﻿namespace HelpDesk.Architecture.Client.Infrastructure.Routes
 {
     public static class ChatEndpoint
     {

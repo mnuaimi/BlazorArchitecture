@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers
+namespace HelpDesk.Architecture.Server.Controllers
 {
     [Route("api/identity/role")]
     [ApiController]

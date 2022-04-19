@@ -1,28 +1,28 @@
-﻿using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Options;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Settings;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Serialization.JsonConverters;
-using BlazorHero.CleanArchitecture.Application.Serialization.Options;
-using BlazorHero.CleanArchitecture.Application.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Serialization.Settings;
-using BlazorHero.CleanArchitecture.Infrastructure;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Services;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Shared.Services;
-using BlazorHero.CleanArchitecture.Server.Localization;
-using BlazorHero.CleanArchitecture.Server.Managers.Preferences;
-using BlazorHero.CleanArchitecture.Server.Services;
-using BlazorHero.CleanArchitecture.Server.Settings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Localization;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Configurations;
+using HelpDesk.Architecture.Application.Interfaces.Serialization.Options;
+using HelpDesk.Architecture.Application.Interfaces.Serialization.Serializers;
+using HelpDesk.Architecture.Application.Interfaces.Serialization.Settings;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Account;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Serialization.JsonConverters;
+using HelpDesk.Architecture.Application.Serialization.Options;
+using HelpDesk.Architecture.Application.Serialization.Serializers;
+using HelpDesk.Architecture.Application.Serialization.Settings;
+using HelpDesk.Architecture.Infrastructure;
+using HelpDesk.Architecture.Infrastructure.Contexts;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Infrastructure.Services;
+using HelpDesk.Architecture.Infrastructure.Services.Identity;
+using HelpDesk.Architecture.Infrastructure.Shared.Services;
+using HelpDesk.Architecture.Server.Localization;
+using HelpDesk.Architecture.Server.Managers.Preferences;
+using HelpDesk.Architecture.Server.Services;
+using HelpDesk.Architecture.Server.Settings;
+using HelpDesk.Architecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Constants.Localization;
+using HelpDesk.Architecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -48,7 +48,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Extensions
+namespace HelpDesk.Architecture.Server.Extensions
 {
     internal static class ServiceCollectionExtensions
     {
@@ -156,7 +156,7 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "BlazorHero.CleanArchitecture",
+                    Title = "HelpDesk.Architecture",
                     License = new OpenApiLicense
                     {
                         Name = "MIT License",
@@ -213,7 +213,7 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
             this IServiceCollection services,
             IConfiguration configuration)
             => services
-                .AddDbContext<BlazorHeroContext>(options => options
+                .AddDbContext<HelpDeskContext>(options => options
                     .UseSqlServer(configuration.GetConnectionString("DefaultConnection")))
             .AddTransient<IDatabaseSeeder, DatabaseSeeder>();
 
@@ -227,7 +227,7 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
         internal static IServiceCollection AddIdentity(this IServiceCollection services)
         {
             services
-                .AddIdentity<BlazorHeroUser, BlazorHeroRole>(options =>
+                .AddIdentity<HelpDeskUser, HelpDeskRole>(options =>
                 {
                     options.Password.RequiredLength = 6;
                     options.Password.RequireDigit = false;
@@ -236,7 +236,7 @@ namespace BlazorHero.CleanArchitecture.Server.Extensions
                     options.Password.RequireUppercase = false;
                     options.User.RequireUniqueEmail = true;
                 })
-                .AddEntityFrameworkStores<BlazorHeroContext>()
+                .AddEntityFrameworkStores<HelpDeskContext>()
                 .AddDefaultTokenProviders();
 
             return services;

@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Specifications.Misc;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Extensions;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Specifications.Misc;
+using HelpDesk.Architecture.Domain.Entities.Misc;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using System;
 using System.Linq;
@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetAll
+namespace HelpDesk.Architecture.Application.Features.Documents.Queries.GetAll
 {
     public class GetAllDocumentsQuery : IRequest<PaginatedResult<GetAllDocumentsResponse>>
     {

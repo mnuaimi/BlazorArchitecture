@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Shared.Constants.Storage
+﻿namespace HelpDesk.Architecture.Shared.Constants.Storage
 {
     public static class StorageConstants
     {

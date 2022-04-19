@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
+﻿using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Domain.Entities.Misc;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace HelpDesk.Architecture.Infrastructure.Repositories
 {
     public class DocumentTypeRepository : IDocumentTypeRepository
     {

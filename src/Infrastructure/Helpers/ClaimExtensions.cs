@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+﻿using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Helpers
+namespace HelpDesk.Architecture.Infrastructure.Helpers
 {
     public static class ClaimsHelper
     {
@@ -43,7 +43,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Helpers
 
         }
 
-        public static async Task<IdentityResult> AddPermissionClaim(this RoleManager<BlazorHeroRole> roleManager, BlazorHeroRole role, string permission)
+        public static async Task<IdentityResult> AddPermissionClaim(this RoleManager<HelpDeskRole> roleManager, HelpDeskRole role, string permission)
         {
             var allClaims = await roleManager.GetClaimsAsync(role);
             if (!allClaims.Any(a => a.Type == ApplicationClaimTypes.Permission && a.Value == permission))

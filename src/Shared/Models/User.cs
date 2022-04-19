@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Shared.Models
+namespace HelpDesk.Architecture.Shared.Models
 {
     public class User
     {

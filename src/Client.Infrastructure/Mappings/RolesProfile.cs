@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Mappings
+namespace HelpDesk.Architecture.Client.Infrastructure.Mappings
 {
     public class RoleProfile : Profile
     {

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Helpers;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Constants.Role;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Helpers;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Shared.Constants.Role;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -13,24 +13,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace HelpDesk.Architecture.Infrastructure.Services.Identity
 {
     public class RoleService : IRoleService
     {
-        private readonly RoleManager<BlazorHeroRole> _roleManager;
-        private readonly UserManager<BlazorHeroUser> _userManager;
+        private readonly RoleManager<HelpDeskRole> _roleManager;
+        private readonly UserManager<HelpDeskUser> _userManager;
         private readonly IRoleClaimService _roleClaimService;
         private readonly IStringLocalizer<RoleService> _localizer;
         private readonly ICurrentUserService _currentUserService;
         private readonly IMapper _mapper;
 
         public RoleService(
-            RoleManager<BlazorHeroRole> roleManager,
+            RoleManager<HelpDeskRole> roleManager,
             IMapper mapper,
-            UserManager<BlazorHeroUser> userManager,
+            UserManager<HelpDeskUser> userManager,
             IRoleClaimService roleClaimService,
             IStringLocalizer<RoleService> localizer,
             ICurrentUserService currentUserService)
@@ -149,7 +149,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
             {
                 var existingRole = await _roleManager.FindByNameAsync(request.Name);
                 if (existingRole != null) return await Result<string>.FailAsync(_localizer["Similar Role already exists."]);
-                var response = await _roleManager.CreateAsync(new BlazorHeroRole(request.Name, request.Description));
+                var response = await _roleManager.CreateAsync(new HelpDeskRole(request.Name, request.Description));
                 if (response.Succeeded)
                 {
                     return await Result<string>.SuccessAsync(string.Format(_localizer["Role {0} Created."], request.Name));

@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Managers;
+﻿using HelpDesk.Architecture.Shared.Managers;
 using MudBlazor;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preferences
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Preferences
 {
     public interface IClientPreferenceManager : IPreferenceManager
     {

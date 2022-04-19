@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
+﻿using HelpDesk.Architecture.Application.Interfaces.Serialization.Serializers;
 using FluentValidation;
 using FluentValidation.Validators;
 
-namespace BlazorHero.CleanArchitecture.Application.Validators
+namespace HelpDesk.Architecture.Application.Validators
 {
     public class JsonValidator<T> : PropertyValidator<T, string>
     {

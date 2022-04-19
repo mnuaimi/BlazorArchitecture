@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Users
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Identity.Users
 {
     public interface IUserManager : IManager
     {

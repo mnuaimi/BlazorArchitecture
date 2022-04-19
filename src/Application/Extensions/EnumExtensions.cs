@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace BlazorHero.CleanArchitecture.Application.Extensions
+namespace HelpDesk.Architecture.Application.Extensions
 {
     public static class EnumExtensions
     {

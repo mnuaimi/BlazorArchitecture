@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Migrations
+namespace HelpDesk.Architecture.Infrastructure.Migrations
 {
     public partial class initial : Migration
     {

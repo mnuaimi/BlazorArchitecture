@@ -2,12 +2,12 @@
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Client.Infrastructure.Extensions;
+using HelpDesk.Architecture.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.RoleClaims
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Identity.RoleClaims
 {
     public class RoleClaimManager : IRoleClaimManager
     {

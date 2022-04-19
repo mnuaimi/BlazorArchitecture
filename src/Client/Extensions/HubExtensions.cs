@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Blazored.LocalStorage;
 
-namespace BlazorHero.CleanArchitecture.Client.Extensions
+namespace HelpDesk.Architecture.Client.Extensions
 {
     public static class HubExtensions
     {

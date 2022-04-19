@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Server.Localization
+namespace HelpDesk.Architecture.Server.Localization
 {
     internal class ServerLocalizer<T> where T : class
     {

@@ -168,8 +168,8 @@
   <data name="Learning Resources" xml:space="preserve">
     <value>Recursos para Aprendizaje</value>
   </data>
-  <data name="Liked BlazorHero? Star us on Github!" xml:space="preserve">
-    <value>¿Te gustó BlazorHero? Deja una estrella en Github!</value>
+  <data name="Liked HelpDesk? Star us on Github!" xml:space="preserve">
+    <value>¿Te gustó HelpDesk? Deja una estrella en Github!</value>
   </data>
   <data name="Onion Architecture In ASP.NET Core With CQRS – Detailed" xml:space="preserve">
     <value>Arquitectura Onion en ASP.NET Core con CQRS – Detalle</value>

@@ -1,7 +1,7 @@
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Server.Extensions;
-using BlazorHero.CleanArchitecture.Server.Middlewares;
+using HelpDesk.Architecture.Application.Extensions;
+using HelpDesk.Architecture.Infrastructure.Extensions;
+using HelpDesk.Architecture.Server.Extensions;
+using HelpDesk.Architecture.Server.Middlewares;
 using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,11 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
-using BlazorHero.CleanArchitecture.Server.Filters;
-using BlazorHero.CleanArchitecture.Server.Managers.Preferences;
+using HelpDesk.Architecture.Server.Filters;
+using HelpDesk.Architecture.Server.Managers.Preferences;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Server
+namespace HelpDesk.Architecture.Server
 {
     public class Startup
     {
@@ -86,7 +86,7 @@ namespace BlazorHero.CleanArchitecture.Server
             app.UseAuthorization();
             app.UseHangfireDashboard("/jobs", new DashboardOptions
             {
-                DashboardTitle = localizer["BlazorHero Jobs"],
+                DashboardTitle = localizer["HelpDesk Jobs"],
                 Authorization = new[] { new HangfireAuthorizationFilter() }
             });
             app.UseEndpoints();

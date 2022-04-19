@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Domain.Contracts;
+﻿using HelpDesk.Architecture.Domain.Contracts;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Application.Models.Chat;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Identity
+namespace HelpDesk.Architecture.Infrastructure.Models.Identity
 {
-    public class BlazorHeroUser : IdentityUser<string>, IChatUser, IAuditableEntity<string>
+    public class HelpDeskUser : IdentityUser<string>, IChatUser, IAuditableEntity<string>
     {
         public string FirstName { get; set; }
 
@@ -30,13 +30,13 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Identity
         public bool IsActive { get; set; }
         public string RefreshToken { get; set; }
         public DateTime RefreshTokenExpiryTime { get; set; }
-        public virtual ICollection<ChatHistory<BlazorHeroUser>> ChatHistoryFromUsers { get; set; }
-        public virtual ICollection<ChatHistory<BlazorHeroUser>> ChatHistoryToUsers { get; set; }
+        public virtual ICollection<ChatHistory<HelpDeskUser>> ChatHistoryFromUsers { get; set; }
+        public virtual ICollection<ChatHistory<HelpDeskUser>> ChatHistoryToUsers { get; set; }
 
-        public BlazorHeroUser()
+        public HelpDeskUser()
         {
-            ChatHistoryFromUsers = new HashSet<ChatHistory<BlazorHeroUser>>();
-            ChatHistoryToUsers = new HashSet<ChatHistory<BlazorHeroUser>>();
+            ChatHistoryFromUsers = new HashSet<ChatHistory<HelpDeskUser>>();
+            ChatHistoryToUsers = new HashSet<ChatHistory<HelpDeskUser>>();
         }
     }
 }

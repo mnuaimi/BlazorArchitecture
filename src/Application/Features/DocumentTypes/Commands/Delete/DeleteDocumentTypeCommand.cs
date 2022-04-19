@@ -1,13 +1,13 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Domain.Entities.Misc;
+using HelpDesk.Architecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Commands.Delete
+namespace HelpDesk.Architecture.Application.Features.DocumentTypes.Commands.Delete
 {
     public class DeleteDocumentTypeCommand : IRequest<Result<int>>
     {

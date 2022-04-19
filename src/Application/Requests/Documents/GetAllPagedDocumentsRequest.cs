@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Requests.Documents
+﻿namespace HelpDesk.Architecture.Application.Requests.Documents
 {
     public class GetAllPagedDocumentsRequest : PagedRequest
     {

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>BlazorHero.CleanArchitecture.Application</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Application</AssemblyName>
+    <RootNamespace>HelpDesk.Architecture.Application</RootNamespace>
+    <AssemblyName>HelpDesk.Architecture.Application</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>

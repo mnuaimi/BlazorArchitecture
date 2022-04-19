@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage
+namespace HelpDesk.Architecture.Application.Interfaces.Services.Storage
 {
     public interface IServerStorageService
     {

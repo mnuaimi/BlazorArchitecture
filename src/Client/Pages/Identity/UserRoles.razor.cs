@@ -1,15 +1,15 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace HelpDesk.Architecture.Client.Pages.Identity
 {
     public partial class UserRoles
     {

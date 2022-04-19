@@ -1,18 +1,18 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
+﻿using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace HelpDesk.Architecture.Infrastructure.Repositories
 {
     public class RepositoryAsync<T, TId> : IRepositoryAsync<T, TId> where T : AuditableEntity<TId>
     {
-        private readonly BlazorHeroContext _dbContext;
+        private readonly HelpDeskContext _dbContext;
 
-        public RepositoryAsync(BlazorHeroContext dbContext)
+        public RepositoryAsync(HelpDeskContext dbContext)
         {
             _dbContext = dbContext;
         }

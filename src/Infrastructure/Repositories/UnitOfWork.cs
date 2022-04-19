@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
+﻿using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Infrastructure.Contexts;
 using LazyCache;
 using System;
 using System.Collections;
@@ -9,17 +9,17 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace HelpDesk.Architecture.Infrastructure.Repositories
 {
     public class UnitOfWork<TId> : IUnitOfWork<TId>
     {
         private readonly ICurrentUserService _currentUserService;
-        private readonly BlazorHeroContext _dbContext;
+        private readonly HelpDeskContext _dbContext;
         private bool disposed;
         private Hashtable _repositories;
         private readonly IAppCache _cache;
 
-        public UnitOfWork(BlazorHeroContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
+        public UnitOfWork(HelpDeskContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _currentUserService = currentUserService;

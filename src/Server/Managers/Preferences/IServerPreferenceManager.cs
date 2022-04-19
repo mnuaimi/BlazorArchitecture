@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Managers;
+﻿using HelpDesk.Architecture.Shared.Managers;
 
-namespace BlazorHero.CleanArchitecture.Server.Managers.Preferences
+namespace HelpDesk.Architecture.Server.Managers.Preferences
 {
     public interface IServerPreferenceManager : IPreferenceManager
     {

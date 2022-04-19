@@ -4,18 +4,18 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Specifications.ExtendedAttribute;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Enums;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Extensions;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Specifications.ExtendedAttribute;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Enums;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.Export
+namespace HelpDesk.Architecture.Application.Features.ExtendedAttributes.Queries.Export
 {
     internal class ExportExtendedAttributesQueryLocalization
     {

@@ -1,11 +1,11 @@
 ﻿using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using MudBlazor;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Authentication
+namespace HelpDesk.Architecture.Client.Pages.Authentication
 {
     public partial class Login
     {
@@ -56,13 +56,13 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Authentication
 
         private void FillAdministratorCredentials()
         {
-            _tokenModel.Email = "mukesh@blazorhero.com";
+            _tokenModel.Email = "mukesh@HelpDesk.com";
             _tokenModel.Password = "123Pa$$word!";
         }
 
         private void FillBasicUserCredentials()
         {
-            _tokenModel.Email = "john@blazorhero.com";
+            _tokenModel.Email = "john@HelpDesk.com";
             _tokenModel.Password = "123Pa$$word!";
         }
     }

@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Mappings
+namespace HelpDesk.Architecture.Infrastructure.Mappings
 {
     public class RoleProfile : Profile
     {
         public RoleProfile()
         {
-            CreateMap<RoleResponse, BlazorHeroRole>().ReverseMap();
+            CreateMap<RoleResponse, HelpDeskRole>().ReverseMap();
         }
     }
 }

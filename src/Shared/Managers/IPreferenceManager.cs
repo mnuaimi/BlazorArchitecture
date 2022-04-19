@@ -1,8 +1,8 @@
-﻿using BlazorHero.CleanArchitecture.Shared.Settings;
+﻿using HelpDesk.Architecture.Shared.Settings;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Shared.Managers
+namespace HelpDesk.Architecture.Shared.Managers
 {
     public interface IPreferenceManager
     {

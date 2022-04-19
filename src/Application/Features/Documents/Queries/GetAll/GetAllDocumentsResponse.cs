@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetAll
+namespace HelpDesk.Architecture.Application.Features.Documents.Queries.GetAll
 {
     public class GetAllDocumentsResponse
     {

@@ -1,5 +1,5 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
+﻿using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Client.Extensions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using MudBlazor;
@@ -7,9 +7,9 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Shared.Constants.Storage;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace HelpDesk.Architecture.Client.Pages.Identity
 {
     public partial class Profile
     {

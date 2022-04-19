@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Migrations
+namespace HelpDesk.Architecture.Infrastructure.Migrations
 {
-    public partial class AddBlazorHeroRole : Migration
+    public partial class AddHelpDeskRole : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

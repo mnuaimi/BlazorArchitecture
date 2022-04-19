@@ -1,31 +1,31 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Models.Chat;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Entities.Catalog;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Domain.Entities.ExtendedAttributes;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
+using HelpDesk.Architecture.Domain.Entities.ExtendedAttributes;
+using HelpDesk.Architecture.Domain.Entities.Misc;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
+namespace HelpDesk.Architecture.Infrastructure.Contexts
 {
-    public class BlazorHeroContext : AuditableContext
+    public class HelpDeskContext : AuditableContext
     {
         private readonly ICurrentUserService _currentUserService;
         private readonly IDateTimeService _dateTimeService;
 
-        public BlazorHeroContext(DbContextOptions<BlazorHeroContext> options, ICurrentUserService currentUserService, IDateTimeService dateTimeService)
+        public HelpDeskContext(DbContextOptions<HelpDeskContext> options, ICurrentUserService currentUserService, IDateTimeService dateTimeService)
             : base(options)
         {
             _currentUserService = currentUserService;
             _dateTimeService = dateTimeService;
         }
 
-        public DbSet<ChatHistory<BlazorHeroUser>> ChatHistories { get; set; }
+        public DbSet<ChatHistory<HelpDeskUser>> ChatHistories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Document> Documents { get; set; }
@@ -76,7 +76,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
             }
             
             base.OnModelCreating(builder);
-            builder.Entity<ChatHistory<BlazorHeroUser>>(entity =>
+            builder.Entity<ChatHistory<HelpDeskUser>>(entity =>
             {
                 entity.ToTable("ChatHistory");
 
@@ -90,13 +90,13 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
                     .HasForeignKey(d => d.ToUserId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
-            builder.Entity<BlazorHeroUser>(entity =>
+            builder.Entity<HelpDeskUser>(entity =>
             {
                 entity.ToTable(name: "Users", "Identity");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
             });
 
-            builder.Entity<BlazorHeroRole>(entity =>
+            builder.Entity<HelpDeskRole>(entity =>
             {
                 entity.ToTable(name: "Roles", "Identity");
             });
@@ -115,7 +115,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
                 entity.ToTable("UserLogins", "Identity");
             });
 
-            builder.Entity<BlazorHeroRoleClaim>(entity =>
+            builder.Entity<HelpDeskRoleClaim>(entity =>
             {
                 entity.ToTable(name: "RoleClaims", "Identity");
 

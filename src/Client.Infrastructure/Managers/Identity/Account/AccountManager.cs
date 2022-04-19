@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Client.Infrastructure.Extensions;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Account
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Identity.Account
 {
     public class AccountManager : IAccountManager
     {

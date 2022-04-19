@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Account;
+using HelpDesk.Architecture.Application.Requests.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.Identity
+namespace HelpDesk.Architecture.Server.Controllers.Identity
 {
     [Authorize]
     [Route("api/identity/account")]

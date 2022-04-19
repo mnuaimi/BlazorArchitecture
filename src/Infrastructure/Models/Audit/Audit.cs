@@ -1,7 +1,7 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Audit
+namespace HelpDesk.Architecture.Infrastructure.Models.Audit
 {
     public class Audit : IEntity<int>
     {

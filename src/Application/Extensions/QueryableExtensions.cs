@@ -1,13 +1,13 @@
-﻿using BlazorHero.CleanArchitecture.Application.Exceptions;
-using BlazorHero.CleanArchitecture.Application.Specifications.Base;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Exceptions;
+using HelpDesk.Architecture.Application.Specifications.Base;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Application.Extensions
+namespace HelpDesk.Architecture.Application.Extensions
 {
     public static class QueryableExtensions
     {

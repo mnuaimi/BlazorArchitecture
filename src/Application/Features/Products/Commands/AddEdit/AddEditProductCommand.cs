@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Requests;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Requests;
+using HelpDesk.Architecture.Domain.Entities.Catalog;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Localization;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Products.Commands.AddEdit
+namespace HelpDesk.Architecture.Application.Features.Products.Commands.AddEdit
 {
     public partial class AddEditProductCommand : IRequest<Result<int>>
     {

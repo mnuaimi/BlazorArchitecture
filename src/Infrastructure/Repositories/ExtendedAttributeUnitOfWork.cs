@@ -3,23 +3,23 @@ using System.Collections;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Infrastructure.Contexts;
 using LazyCache;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Repositories
+namespace HelpDesk.Architecture.Infrastructure.Repositories
 {
     public class ExtendedAttributeUnitOfWork<TId, TEntityId, TEntity> : IExtendedAttributeUnitOfWork<TId, TEntityId, TEntity> where TEntity : AuditableEntity<TEntityId>
     {
         private readonly ICurrentUserService _currentUserService;
-        private readonly BlazorHeroContext _dbContext;
+        private readonly HelpDeskContext _dbContext;
         private bool _disposed;
         private Hashtable _repositories;
         private readonly IAppCache _cache;
 
-        public ExtendedAttributeUnitOfWork(BlazorHeroContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
+        public ExtendedAttributeUnitOfWork(HelpDeskContext dbContext, ICurrentUserService currentUserService, IAppCache cache)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _currentUserService = currentUserService;

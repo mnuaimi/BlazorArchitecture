@@ -1,8 +1,8 @@
 ﻿using Blazored.LocalStorage;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Authentication;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preferences;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Client.Infrastructure.Authentication;
+using HelpDesk.Architecture.Client.Infrastructure.Managers;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Preferences;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -14,16 +14,16 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.ExtendedAttribute;
-using BlazorHero.CleanArchitecture.Domain.Entities.ExtendedAttributes;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.ExtendedAttribute;
+using HelpDesk.Architecture.Domain.Entities.ExtendedAttributes;
+using HelpDesk.Architecture.Domain.Entities.Misc;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 
-namespace BlazorHero.CleanArchitecture.Client.Extensions
+namespace HelpDesk.Architecture.Client.Extensions
 {
     public static class WebAssemblyHostBuilderExtensions
     {
-        private const string ClientName = "BlazorHero.API";
+        private const string ClientName = "HelpDesk.API";
 
         public static WebAssemblyHostBuilder AddRootComponents(this WebAssemblyHostBuilder builder)
         {
@@ -55,8 +55,8 @@ namespace BlazorHero.CleanArchitecture.Client.Extensions
                 })
                 .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
                 .AddScoped<ClientPreferenceManager>()
-                .AddScoped<BlazorHeroStateProvider>()
-                .AddScoped<AuthenticationStateProvider, BlazorHeroStateProvider>()
+                .AddScoped<HelpDeskStateProvider>()
+                .AddScoped<AuthenticationStateProvider, HelpDeskStateProvider>()
                 .AddManagers()
                 .AddExtendedAttributeManagers()
                 .AddTransient<AuthenticationHeaderHandler>()

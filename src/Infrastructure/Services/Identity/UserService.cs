@@ -6,29 +6,29 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Exceptions;
-using BlazorHero.CleanArchitecture.Application.Extensions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Mail;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Specifications;
-using BlazorHero.CleanArchitecture.Shared.Constants.Role;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Exceptions;
+using HelpDesk.Architecture.Application.Extensions;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Requests.Mail;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Infrastructure.Specifications;
+using HelpDesk.Architecture.Shared.Constants.Role;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace HelpDesk.Architecture.Infrastructure.Services.Identity
 {
     public class UserService : IUserService
     {
-        private readonly UserManager<BlazorHeroUser> _userManager;
-        private readonly RoleManager<BlazorHeroRole> _roleManager;
+        private readonly UserManager<HelpDeskUser> _userManager;
+        private readonly RoleManager<HelpDeskRole> _roleManager;
         private readonly IMailService _mailService;
         private readonly IStringLocalizer<UserService> _localizer;
         private readonly IExcelService _excelService;
@@ -36,9 +36,9 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
         private readonly IMapper _mapper;
 
         public UserService(
-            UserManager<BlazorHeroUser> userManager,
+            UserManager<HelpDeskUser> userManager,
             IMapper mapper,
-            RoleManager<BlazorHeroRole> roleManager,
+            RoleManager<HelpDeskRole> roleManager,
             IMailService mailService,
             IStringLocalizer<UserService> localizer,
             IExcelService excelService,
@@ -67,7 +67,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
             {
                 return await Result.FailAsync(string.Format(_localizer["Username {0} is already taken."], request.UserName));
             }
-            var user = new BlazorHeroUser
+            var user = new HelpDeskUser
             {
                 Email = request.Email,
                 FirstName = request.FirstName,
@@ -120,7 +120,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
             }
         }
 
-        private async Task<string> SendVerificationEmail(BlazorHeroUser user, string origin)
+        private async Task<string> SendVerificationEmail(HelpDeskUser user, string origin)
         {
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -184,7 +184,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
         public async Task<IResult> UpdateRolesAsync(UpdateUserRolesRequest request)
         {
             var user = await _userManager.FindByIdAsync(request.UserId);
-            if (user.Email == "mukesh@blazorhero.com")
+            if (user.Email == "mukesh@HelpDesk.com")
             {
                 return await Result.FailAsync(_localizer["Not Allowed."]);
             }
@@ -283,7 +283,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
                 .OrderByDescending(a => a.CreatedOn)
                 .ToListAsync();
             var result = await _excelService.ExportAsync(users, sheetName: _localizer["Users"],
-                mappers: new Dictionary<string, Func<BlazorHeroUser, object>>
+                mappers: new Dictionary<string, Func<HelpDeskUser, object>>
                 {
                     { _localizer["Id"], item => item.Id },
                     { _localizer["FirstName"], item => item.FirstName },

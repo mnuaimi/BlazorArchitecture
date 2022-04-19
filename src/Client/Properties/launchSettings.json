@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "BlazorHero.CleanArchitecture": {
+    "HelpDesk.Architecture": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

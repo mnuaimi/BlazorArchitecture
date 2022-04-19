@@ -1,12 +1,12 @@
-﻿using BlazorHero.CleanArchitecture.Application.Serialization.Options;
-using BlazorHero.CleanArchitecture.Application.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Infrastructure.Extensions;
+﻿using HelpDesk.Architecture.Application.Serialization.Options;
+using HelpDesk.Architecture.Application.Serialization.Serializers;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.Extensions.Options;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Configurations
+namespace HelpDesk.Architecture.Infrastructure.Configurations
 {
     public class EntityExtendedAttributeConfiguration : IEntityTypeConfiguration<IEntityExtendedAttribute>
     {

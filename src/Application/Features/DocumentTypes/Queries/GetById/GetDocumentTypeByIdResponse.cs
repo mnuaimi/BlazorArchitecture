@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetById
+﻿namespace HelpDesk.Architecture.Application.Features.DocumentTypes.Queries.GetById
 {
     public class GetDocumentTypeByIdResponse
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Chat
+namespace HelpDesk.Architecture.Application.Interfaces.Chat
 {
     public interface IChatHistory<TUser> where TUser : IChatUser
     {

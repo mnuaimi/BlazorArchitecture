@@ -1,4 +1,4 @@
-namespace BlazorHero.CleanArchitecture.Application.Models.Chat
+namespace HelpDesk.Architecture.Application.Models.Chat
 {
     public class Message
     {

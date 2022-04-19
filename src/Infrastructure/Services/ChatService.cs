@@ -1,31 +1,31 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Exceptions;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Exceptions;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Models.Chat;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Contexts;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Constants.Role;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Shared.Constants.Role;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services
+namespace HelpDesk.Architecture.Infrastructure.Services
 {
     public class ChatService : IChatService
     {
-        private readonly BlazorHeroContext _context;
+        private readonly HelpDeskContext _context;
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
         private readonly IStringLocalizer<ChatService> _localizer;
 
         public ChatService(
-            BlazorHeroContext context,
+            HelpDeskContext context,
             IMapper mapper,
             IUserService userService,
             IStringLocalizer<ChatService> localizer)
@@ -79,7 +79,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services
         public async Task<IResult> SaveMessageAsync(ChatHistory<IChatUser> message)
         {
             message.ToUser = await _context.Users.Where(user => user.Id == message.ToUserId).FirstOrDefaultAsync();
-            await _context.ChatHistories.AddAsync(_mapper.Map<ChatHistory<BlazorHeroUser>>(message));
+            await _context.ChatHistories.AddAsync(_mapper.Map<ChatHistory<HelpDeskUser>>(message));
             await _context.SaveChangesAsync();
             return await Result.SuccessAsync();
         }

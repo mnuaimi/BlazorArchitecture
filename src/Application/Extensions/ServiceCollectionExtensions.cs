@@ -3,16 +3,16 @@ using System.Linq;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.Delete;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.Export;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Queries.GetById;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Commands.Delete;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Queries.Export;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Queries.GetAll;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Queries.GetAllByEntityId;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Queries.GetById;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Application.Extensions
+namespace HelpDesk.Architecture.Application.Extensions
 {
     public static class ServiceCollectionExtensions
     {

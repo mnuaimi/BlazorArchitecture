@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Application.Models.Chat;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Mappings
+namespace HelpDesk.Architecture.Infrastructure.Mappings
 {
     public class ChatHistoryProfile : Profile
     {
         public ChatHistoryProfile()
         {
-            CreateMap<ChatHistory<IChatUser>, ChatHistory<BlazorHeroUser>>().ReverseMap();
+            CreateMap<ChatHistory<IChatUser>, ChatHistory<HelpDeskUser>>().ReverseMap();
         }
     }
 }

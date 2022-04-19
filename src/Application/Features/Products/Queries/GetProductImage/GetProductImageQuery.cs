@@ -1,13 +1,13 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Domain.Entities.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Domain.Entities.Catalog;
+using HelpDesk.Architecture.Shared.Wrapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Features.Products.Queries.GetProductImage
+namespace HelpDesk.Architecture.Application.Features.Products.Queries.GetProductImage
 {
     public class GetProductImageQuery : IRequest<Result<string>>
     {

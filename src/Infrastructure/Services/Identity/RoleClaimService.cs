@@ -2,30 +2,30 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Contexts;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace HelpDesk.Architecture.Infrastructure.Services.Identity
 {
     public class RoleClaimService : IRoleClaimService
     {
         private readonly IStringLocalizer<RoleClaimService> _localizer;
         private readonly IMapper _mapper;
         private readonly ICurrentUserService _currentUserService;
-        private readonly BlazorHeroContext _db;
+        private readonly HelpDeskContext _db;
 
         public RoleClaimService(
             IStringLocalizer<RoleClaimService> localizer,
             IMapper mapper,
             ICurrentUserService currentUserService,
-            BlazorHeroContext db)
+            HelpDeskContext db)
         {
             _localizer = localizer;
             _mapper = mapper;
@@ -81,7 +81,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
                 {
                     return await Result<string>.FailAsync(_localizer["Similar Role Claim already exists."]);
                 }
-                var roleClaim = _mapper.Map<BlazorHeroRoleClaim>(request);
+                var roleClaim = _mapper.Map<HelpDeskRoleClaim>(request);
                 await _db.RoleClaims.AddAsync(roleClaim);
                 await _db.SaveChangesAsync(_currentUserService.UserId);
                 return await Result<string>.SuccessAsync(string.Format(_localizer["Role Claim {0} created."], request.Value));

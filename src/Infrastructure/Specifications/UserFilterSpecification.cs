@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Application.Specifications.Base;
+﻿using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Application.Specifications.Base;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Specifications
+namespace HelpDesk.Architecture.Infrastructure.Specifications
 {
-    public class UserFilterSpecification : HeroSpecification<BlazorHeroUser>
+    public class UserFilterSpecification : HeroSpecification<HelpDeskUser>
     {
         public UserFilterSpecification(string searchString)
         {

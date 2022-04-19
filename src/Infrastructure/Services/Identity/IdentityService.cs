@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Configurations;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Configurations;
+using HelpDesk.Architecture.Application.Interfaces.Services.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
@@ -17,21 +17,21 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace HelpDesk.Architecture.Infrastructure.Services.Identity
 {
     public class IdentityService : ITokenService
     {
         private const string InvalidErrorMessage = "Invalid email or password.";
 
-        private readonly UserManager<BlazorHeroUser> _userManager;
-        private readonly RoleManager<BlazorHeroRole> _roleManager;
+        private readonly UserManager<HelpDeskUser> _userManager;
+        private readonly RoleManager<HelpDeskRole> _roleManager;
         private readonly AppConfiguration _appConfig;
-        private readonly SignInManager<BlazorHeroUser> _signInManager;
+        private readonly SignInManager<HelpDeskUser> _signInManager;
         private readonly IStringLocalizer<IdentityService> _localizer;
 
         public IdentityService(
-            UserManager<BlazorHeroUser> userManager, RoleManager<BlazorHeroRole> roleManager,
-            IOptions<AppConfiguration> appConfig, SignInManager<BlazorHeroUser> signInManager,
+            UserManager<HelpDeskUser> userManager, RoleManager<HelpDeskRole> roleManager,
+            IOptions<AppConfiguration> appConfig, SignInManager<HelpDeskUser> signInManager,
             IStringLocalizer<IdentityService> localizer)
         {
             _userManager = userManager;
@@ -92,13 +92,13 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
             return await Result<TokenResponse>.SuccessAsync(response);
         }
 
-        private async Task<string> GenerateJwtAsync(BlazorHeroUser user)
+        private async Task<string> GenerateJwtAsync(HelpDeskUser user)
         {
             var token = GenerateEncryptedToken(GetSigningCredentials(), await GetClaimsAsync(user));
             return token;
         }
 
-        private async Task<IEnumerable<Claim>> GetClaimsAsync(BlazorHeroUser user)
+        private async Task<IEnumerable<Claim>> GetClaimsAsync(HelpDeskUser user)
         {
             var userClaims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user);

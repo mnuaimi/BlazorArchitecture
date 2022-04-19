@@ -2,18 +2,18 @@
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Repositories;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage.Provider;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Serialization.Serializers;
-using BlazorHero.CleanArchitecture.Application.Serialization.JsonConverters;
-using BlazorHero.CleanArchitecture.Infrastructure.Repositories;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Storage;
-using BlazorHero.CleanArchitecture.Application.Serialization.Options;
-using BlazorHero.CleanArchitecture.Infrastructure.Services.Storage.Provider;
-using BlazorHero.CleanArchitecture.Application.Serialization.Serializers;
+using HelpDesk.Architecture.Application.Interfaces.Repositories;
+using HelpDesk.Architecture.Application.Interfaces.Services.Storage;
+using HelpDesk.Architecture.Application.Interfaces.Services.Storage.Provider;
+using HelpDesk.Architecture.Application.Interfaces.Serialization.Serializers;
+using HelpDesk.Architecture.Application.Serialization.JsonConverters;
+using HelpDesk.Architecture.Infrastructure.Repositories;
+using HelpDesk.Architecture.Infrastructure.Services.Storage;
+using HelpDesk.Architecture.Application.Serialization.Options;
+using HelpDesk.Architecture.Infrastructure.Services.Storage.Provider;
+using HelpDesk.Architecture.Application.Serialization.Serializers;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Extensions
+namespace HelpDesk.Architecture.Infrastructure.Extensions
 {
     public static class ServiceCollectionExtensions
     {

@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using HelpDesk.Architecture.Application.Models.Chat;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BlazorHero.CleanArchitecture.Server.Hubs
+namespace HelpDesk.Architecture.Server.Hubs
 {
     [Authorize]
     public class SignalRHub : Hub

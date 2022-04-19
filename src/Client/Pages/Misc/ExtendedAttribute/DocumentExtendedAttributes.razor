@@ -1,9 +1,9 @@
 ﻿@page "/extended-attributes/{EntityName}/{EntityIdString}"
 @attribute [Authorize(Policy = Permissions.DocumentExtendedAttributes.View)]
 
-@using BlazorHero.CleanArchitecture.Domain.Entities.Misc
-@using BlazorHero.CleanArchitecture.Domain.Entities.ExtendedAttributes
-@namespace BlazorHero.CleanArchitecture.Client.Pages.Misc.ExtendedAttribute
+@using HelpDesk.Architecture.Domain.Entities.Misc
+@using HelpDesk.Architecture.Domain.Entities.ExtendedAttributes
+@namespace HelpDesk.Architecture.Client.Pages.Misc.ExtendedAttribute
 
 @inherits ExtendedAttributes<int, int, Document, DocumentExtendedAttribute>
 

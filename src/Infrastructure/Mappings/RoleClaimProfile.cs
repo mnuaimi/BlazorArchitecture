@@ -1,22 +1,22 @@
 ﻿using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Mappings
+namespace HelpDesk.Architecture.Infrastructure.Mappings
 {
     public class RoleClaimProfile : Profile
     {
         public RoleClaimProfile()
         {
-            CreateMap<RoleClaimResponse, BlazorHeroRoleClaim>()
-                .ForMember(nameof(BlazorHeroRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
-                .ForMember(nameof(BlazorHeroRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
+            CreateMap<RoleClaimResponse, HelpDeskRoleClaim>()
+                .ForMember(nameof(HelpDeskRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
+                .ForMember(nameof(HelpDeskRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
                 .ReverseMap();
 
-            CreateMap<RoleClaimRequest, BlazorHeroRoleClaim>()
-                .ForMember(nameof(BlazorHeroRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
-                .ForMember(nameof(BlazorHeroRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
+            CreateMap<RoleClaimRequest, HelpDeskRoleClaim>()
+                .ForMember(nameof(HelpDeskRoleClaim.ClaimType), opt => opt.MapFrom(c => c.Type))
+                .ForMember(nameof(HelpDeskRoleClaim.ClaimValue), opt => opt.MapFrom(c => c.Value))
                 .ReverseMap();
         }
     }

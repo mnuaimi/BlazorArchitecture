@@ -1,10 +1,10 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Contracts;
 using Microsoft.AspNetCore.Identity;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Identity
+namespace HelpDesk.Architecture.Infrastructure.Models.Identity
 {
-    public class BlazorHeroRoleClaim : IdentityRoleClaim<string>, IAuditableEntity<int>
+    public class HelpDeskRoleClaim : IdentityRoleClaim<string>, IAuditableEntity<int>
     {
         public string Description { get; set; }
         public string Group { get; set; }
@@ -12,13 +12,13 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Models.Identity
         public DateTime CreatedOn { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime? LastModifiedOn { get; set; }
-        public virtual BlazorHeroRole Role { get; set; }
+        public virtual HelpDeskRole Role { get; set; }
 
-        public BlazorHeroRoleClaim() : base()
+        public HelpDeskRoleClaim() : base()
         {
         }
 
-        public BlazorHeroRoleClaim(string roleClaimDescription = null, string roleClaimGroup = null) : base()
+        public HelpDeskRoleClaim(string roleClaimDescription = null, string roleClaimGroup = null) : base()
         {
             Description = roleClaimDescription;
             Group = roleClaimGroup;

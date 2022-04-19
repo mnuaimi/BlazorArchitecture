@@ -1,14 +1,14 @@
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preferences;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Preferences;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Settings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Localization;
+using HelpDesk.Architecture.Client.Infrastructure.Settings;
+using HelpDesk.Architecture.Shared.Constants.Localization;
 
-namespace BlazorHero.CleanArchitecture.Client
+namespace HelpDesk.Architecture.Client
 {
     public static class Program
     {

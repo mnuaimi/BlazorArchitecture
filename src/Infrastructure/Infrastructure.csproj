@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>BlazorHero.CleanArchitecture.Infrastructure</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Infrastructure</AssemblyName>
+    <RootNamespace>HelpDesk.Architecture.Infrastructure</RootNamespace>
+    <AssemblyName>HelpDesk.Architecture.Infrastructure</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 

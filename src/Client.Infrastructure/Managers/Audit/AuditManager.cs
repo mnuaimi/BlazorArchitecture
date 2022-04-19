@@ -1,11 +1,11 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Audit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Responses.Audit;
+using HelpDesk.Architecture.Client.Infrastructure.Extensions;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Audit
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Audit
 {
     public class AuditManager : IAuditManager
     {

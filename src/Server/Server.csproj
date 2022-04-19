@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>BlazorHero.CleanArchitecture.Server</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Server</AssemblyName>
+    <RootNamespace>HelpDesk.Architecture.Server</RootNamespace>
+    <AssemblyName>HelpDesk.Architecture.Server</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <DocumentationFile>BlazorHero.CleanArchitecture.Server.xml</DocumentationFile>
+    <DocumentationFile>HelpDesk.Architecture.Server.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
     <UserSecretsId>aa8b7360-671b-4ab2-99b0-7df28629ef3d</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>

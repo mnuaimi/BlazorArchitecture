@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Shared.Constants.Role
+﻿namespace HelpDesk.Architecture.Shared.Constants.Role
 {
     public static class RoleConstants
     {

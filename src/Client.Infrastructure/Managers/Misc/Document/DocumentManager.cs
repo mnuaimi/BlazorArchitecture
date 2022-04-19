@@ -1,14 +1,14 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Documents.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Requests.Documents;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Features.Documents.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Features.Documents.Queries.GetAll;
+using HelpDesk.Architecture.Application.Requests.Documents;
+using HelpDesk.Architecture.Client.Infrastructure.Extensions;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetById;
+using HelpDesk.Architecture.Application.Features.Documents.Queries.GetById;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.Document
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Misc.Document
 {
     public class DocumentManager : IDocumentManager
     {

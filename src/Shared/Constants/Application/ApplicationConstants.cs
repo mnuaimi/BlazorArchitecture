@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Shared.Constants.Application
+﻿namespace HelpDesk.Architecture.Shared.Constants.Application
 {
     public static class ApplicationConstants
     {

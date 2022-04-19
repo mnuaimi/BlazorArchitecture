@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Blazored.LocalStorage;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Settings;
+using HelpDesk.Architecture.Client.Infrastructure.Settings;
 using MudBlazor;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
-using BlazorHero.CleanArchitecture.Shared.Settings;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Shared.Settings;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preferences
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Preferences
 {
     public class ClientPreferenceManager : IClientPreferenceManager
     {
@@ -73,9 +73,9 @@ namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Preference
             var preference = await GetPreference() as ClientPreference;
             if (preference != null)
             {
-                if (preference.IsDarkMode == true) return BlazorHeroTheme.DarkTheme;
+                if (preference.IsDarkMode == true) return HelpDeskTheme.DarkTheme;
             }
-            return BlazorHeroTheme.DefaultTheme;
+            return HelpDeskTheme.DefaultTheme;
         }
         public async Task<bool> IsRTL()
         {

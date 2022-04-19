@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
+﻿using HelpDesk.Architecture.Application.Interfaces.Common;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace HelpDesk.Architecture.Application.Interfaces.Services
 {
     public interface ICurrentUserService : IService
     {

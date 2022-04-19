@@ -141,7 +141,7 @@
   <data name="Send" xml:space="preserve">
     <value>Enviar</value>
   </data>
-  <data name="Want to understand how Chat is implemented in BlazorHero ? Refer this" xml:space="preserve">
-    <value>¿Quiere entender como el Chat está implmentado en BlazorHero? Mirar esta referencia</value>
+  <data name="Want to understand how Chat is implemented in HelpDesk ? Refer this" xml:space="preserve">
+    <value>¿Quiere entender como el Chat está implmentado en HelpDesk? Mirar esta referencia</value>
   </data>
 </root>

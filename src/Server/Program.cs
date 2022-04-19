@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Infrastructure.Contexts;
-using BlazorHero.CleanArchitecture.Server.Extensions;
+using HelpDesk.Architecture.Infrastructure.Contexts;
+using HelpDesk.Architecture.Server.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace BlazorHero.CleanArchitecture.Server
+namespace HelpDesk.Architecture.Server
 {
     public class Program
     {
@@ -22,7 +22,7 @@ namespace BlazorHero.CleanArchitecture.Server
 
                 try
                 {
-                    var context = services.GetRequiredService<BlazorHeroContext>();
+                    var context = services.GetRequiredService<HelpDeskContext>();
 
                     if (context.Database.IsSqlServer())
                     {

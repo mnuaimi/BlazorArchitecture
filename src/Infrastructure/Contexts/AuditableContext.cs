@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Application.Enums;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Audit;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
+﻿using HelpDesk.Architecture.Application.Enums;
+using HelpDesk.Architecture.Infrastructure.Models.Audit;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +9,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Contexts
+namespace HelpDesk.Architecture.Infrastructure.Contexts
 {
-    public abstract class AuditableContext : IdentityDbContext<BlazorHeroUser, BlazorHeroRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, BlazorHeroRoleClaim, IdentityUserToken<string>>
+    public abstract class AuditableContext : IdentityDbContext<HelpDeskUser, HelpDeskRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, HelpDeskRoleClaim, IdentityUserToken<string>>
     {
         protected AuditableContext(DbContextOptions options) : base(options)
         {

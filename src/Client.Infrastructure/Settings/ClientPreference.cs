@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using BlazorHero.CleanArchitecture.Shared.Constants.Localization;
-using BlazorHero.CleanArchitecture.Shared.Settings;
+using HelpDesk.Architecture.Shared.Constants.Localization;
+using HelpDesk.Architecture.Shared.Settings;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Settings
+namespace HelpDesk.Architecture.Client.Infrastructure.Settings
 {
     public record ClientPreference : IPreference
     {

@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetAll
+﻿namespace HelpDesk.Architecture.Application.Features.DocumentTypes.Queries.GetAll
 {
     public class GetAllDocumentTypesResponse
     {

@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 using AutoMapper;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Mappings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Client.Infrastructure.Mappings;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Roles;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Identity.Roles;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace HelpDesk.Architecture.Client.Pages.Identity
 {
     public partial class RolePermissions
     {

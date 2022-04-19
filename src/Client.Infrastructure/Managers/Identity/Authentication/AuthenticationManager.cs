@@ -1,11 +1,11 @@
 ﻿using Blazored.LocalStorage;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Authentication;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Routes;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Client.Infrastructure.Authentication;
+using HelpDesk.Architecture.Client.Infrastructure.Extensions;
+using HelpDesk.Architecture.Client.Infrastructure.Routes;
+using HelpDesk.Architecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Localization;
 using System;
@@ -15,7 +15,7 @@ using System.Net.Http.Json;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.Authentication
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Identity.Authentication
 {
     public class AuthenticationManager : IAuthenticationManager
     {
@@ -58,7 +58,7 @@ namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.A
                     await _localStorage.SetItemAsync(StorageConstants.Local.UserImageURL, userImageURL);
                 }
 
-                await ((BlazorHeroStateProvider)this._authenticationStateProvider).StateChangedAsync();
+                await ((HelpDeskStateProvider)this._authenticationStateProvider).StateChangedAsync();
 
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
@@ -75,7 +75,7 @@ namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Identity.A
             await _localStorage.RemoveItemAsync(StorageConstants.Local.AuthToken);
             await _localStorage.RemoveItemAsync(StorageConstants.Local.RefreshToken);
             await _localStorage.RemoveItemAsync(StorageConstants.Local.UserImageURL);
-            ((BlazorHeroStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
+            ((HelpDeskStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
             return await Result.SuccessAsync();
         }

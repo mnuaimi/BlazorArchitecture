@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 
-namespace BlazorHero.CleanArchitecture.Server.Controllers.Utilities
+namespace HelpDesk.Architecture.Server.Controllers.Utilities
 {
     [Route("api/[controller]")]
     [ApiController]

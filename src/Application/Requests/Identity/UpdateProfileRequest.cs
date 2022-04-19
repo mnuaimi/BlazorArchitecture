@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorHero.CleanArchitecture.Application.Requests.Identity
+namespace HelpDesk.Architecture.Application.Requests.Identity
 {
     public class UpdateProfileRequest
     {

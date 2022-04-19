@@ -1,26 +1,26 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account;
-using BlazorHero.CleanArchitecture.Infrastructure.Models.Identity;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
+using HelpDesk.Architecture.Application.Interfaces.Services.Account;
+using HelpDesk.Architecture.Infrastructure.Models.Identity;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services.Identity
+namespace HelpDesk.Architecture.Infrastructure.Services.Identity
 {
     public class AccountService : IAccountService
     {
-        private readonly UserManager<BlazorHeroUser> _userManager;
-        private readonly SignInManager<BlazorHeroUser> _signInManager;
+        private readonly UserManager<HelpDeskUser> _userManager;
+        private readonly SignInManager<HelpDeskUser> _signInManager;
         private readonly IUploadService _uploadService;
         private readonly IStringLocalizer<AccountService> _localizer;
 
         public AccountService(
-            UserManager<BlazorHeroUser> userManager,
-            SignInManager<BlazorHeroUser> signInManager,
+            UserManager<HelpDeskUser> userManager,
+            SignInManager<HelpDeskUser> signInManager,
             IUploadService uploadService,
             IStringLocalizer<AccountService> localizer)
         {

@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Audit;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Responses.Audit;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services
+namespace HelpDesk.Architecture.Application.Interfaces.Services
 {
     public interface IAuditService
     {

@@ -1,4 +1,4 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Services;
+﻿using HelpDesk.Architecture.Application.Interfaces.Services;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Localization;
 using System.IO;
 using System.Data;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Shared.Wrapper;
 
-namespace BlazorHero.CleanArchitecture.Infrastructure.Services
+namespace HelpDesk.Architecture.Infrastructure.Services
 {
     public class ExcelService : IExcelService
     {
@@ -28,7 +28,7 @@ namespace BlazorHero.CleanArchitecture.Infrastructure.Services
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using var p = new ExcelPackage();
-            p.Workbook.Properties.Author = "BlazorHero";
+            p.Workbook.Properties.Author = "HelpDesk";
             p.Workbook.Worksheets.Add(_localizer["Audit Trails"]);
             var ws = p.Workbook.Worksheets[0];
             ws.Name = sheetName;

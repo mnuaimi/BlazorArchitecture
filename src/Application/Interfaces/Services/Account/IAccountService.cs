@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Application.Interfaces.Common;
-using BlazorHero.CleanArchitecture.Application.Requests.Identity;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Interfaces.Common;
+using HelpDesk.Architecture.Application.Requests.Identity;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Services.Account
+namespace HelpDesk.Architecture.Application.Interfaces.Services.Account
 {
     public interface IAccountService : IService
     {

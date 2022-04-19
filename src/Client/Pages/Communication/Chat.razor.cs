@@ -1,7 +1,7 @@
-﻿using BlazorHero.CleanArchitecture.Application.Models.Chat;
-using BlazorHero.CleanArchitecture.Application.Responses.Identity;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+﻿using HelpDesk.Architecture.Application.Models.Chat;
+using HelpDesk.Architecture.Application.Responses.Identity;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -11,11 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Chat;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Communication;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Application.Interfaces.Chat;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Communication;
+using HelpDesk.Architecture.Shared.Constants.Storage;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Communication
+namespace HelpDesk.Architecture.Client.Pages.Communication
 {
     public partial class Chat
     {

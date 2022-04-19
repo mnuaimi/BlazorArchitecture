@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Interfaces.Services.Storage;
-using BlazorHero.CleanArchitecture.Server.Settings;
-using BlazorHero.CleanArchitecture.Shared.Constants.Storage;
-using BlazorHero.CleanArchitecture.Shared.Settings;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+using HelpDesk.Architecture.Application.Interfaces.Services.Storage;
+using HelpDesk.Architecture.Server.Settings;
+using HelpDesk.Architecture.Shared.Constants.Storage;
+using HelpDesk.Architecture.Shared.Settings;
+using HelpDesk.Architecture.Shared.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Server.Managers.Preferences
+namespace HelpDesk.Architecture.Server.Managers.Preferences
 {
     public class ServerPreferenceManager : IServerPreferenceManager
     {

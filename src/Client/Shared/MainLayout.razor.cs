@@ -1,9 +1,9 @@
-﻿using BlazorHero.CleanArchitecture.Client.Infrastructure.Settings;
+﻿using HelpDesk.Architecture.Client.Infrastructure.Settings;
 using MudBlazor;
 using System;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared
+namespace HelpDesk.Architecture.Client.Shared
 {
     public partial class MainLayout : IDisposable
     {
@@ -17,7 +17,7 @@ namespace BlazorHero.CleanArchitecture.Client.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            _currentTheme = BlazorHeroTheme.DefaultTheme;
+            _currentTheme = HelpDeskTheme.DefaultTheme;
             _currentTheme = await _clientPreferenceManager.GetCurrentThemeAsync();
             _rightToLeft = await _clientPreferenceManager.IsRTL();
             _interceptor.RegisterEvent();
@@ -27,8 +27,8 @@ namespace BlazorHero.CleanArchitecture.Client.Shared
         {
             bool isDarkMode = await _clientPreferenceManager.ToggleDarkModeAsync();
             _currentTheme = isDarkMode
-                ? BlazorHeroTheme.DefaultTheme
-                : BlazorHeroTheme.DarkTheme;
+                ? HelpDeskTheme.DefaultTheme
+                : HelpDeskTheme.DarkTheme;
         }
 
         public void Dispose()

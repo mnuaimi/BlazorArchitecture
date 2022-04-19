@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Domain.Contracts;
+﻿using HelpDesk.Architecture.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Domain.Entities.Misc
+namespace HelpDesk.Architecture.Domain.Entities.Misc
 {
     public class DocumentType : AuditableEntity<int>
     {

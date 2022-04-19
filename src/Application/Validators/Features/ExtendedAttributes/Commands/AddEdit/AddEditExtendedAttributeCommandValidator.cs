@@ -1,11 +1,11 @@
 ﻿using System;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Enums;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Enums;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 
-namespace BlazorHero.CleanArchitecture.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit
+namespace HelpDesk.Architecture.Application.Validators.Features.ExtendedAttributes.Commands.AddEdit
 {
     public class AddEditExtendedAttributeCommandValidatorLocalization
     {

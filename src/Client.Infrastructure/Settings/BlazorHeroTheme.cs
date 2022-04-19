@@ -1,8 +1,8 @@
 ﻿using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Settings
+namespace HelpDesk.Architecture.Client.Infrastructure.Settings
 {
-    public class BlazorHeroTheme
+    public class HelpDeskTheme
     {
         private static Typography DefaultTypography = new Typography()
         {

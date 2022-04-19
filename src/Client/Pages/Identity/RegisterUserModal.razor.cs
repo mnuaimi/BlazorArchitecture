@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Application.Requests.Identity;
+﻿using HelpDesk.Architecture.Application.Requests.Identity;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace HelpDesk.Architecture.Client.Pages.Identity
 {
     public partial class RegisterUserModal
     {

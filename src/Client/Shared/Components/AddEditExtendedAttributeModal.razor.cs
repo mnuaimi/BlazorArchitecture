@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Blazored.FluentValidation;
-using BlazorHero.CleanArchitecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.ExtendedAttribute;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
-using BlazorHero.CleanArchitecture.Domain.Enums;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Application.Features.ExtendedAttributes.Commands.AddEdit;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.ExtendedAttribute;
+using HelpDesk.Architecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Enums;
+using HelpDesk.Architecture.Shared.Constants.Application;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Shared.Components
+namespace HelpDesk.Architecture.Client.Shared.Components
 {
     public class AddEditExtendedAttributeModalLocalization
     {

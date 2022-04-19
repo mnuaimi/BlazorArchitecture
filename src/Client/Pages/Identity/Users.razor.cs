@@ -1,16 +1,16 @@
-﻿using BlazorHero.CleanArchitecture.Application.Responses.Identity;
+﻿using HelpDesk.Architecture.Application.Responses.Identity;
 using MudBlazor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.JSInterop;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
+namespace HelpDesk.Architecture.Client.Pages.Identity
 {
     public partial class Users
     {
@@ -115,7 +115,7 @@ namespace BlazorHero.CleanArchitecture.Client.Pages.Identity
 
         private void ManageRoles(string userId, string email)
         {
-            if (email == "mukesh@blazorhero.com") _snackBar.Add(_localizer["Not Allowed."], Severity.Error);
+            if (email == "mukesh@HelpDesk.com") _snackBar.Add(_localizer["Not Allowed."], Severity.Error);
             else _navigationManager.NavigateTo($"/identity/user-roles/{userId}");
         }
     }

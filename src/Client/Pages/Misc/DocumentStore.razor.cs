@@ -1,20 +1,20 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Documents.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Application.Requests.Documents;
-using BlazorHero.CleanArchitecture.Client.Extensions;
+﻿using HelpDesk.Architecture.Application.Features.Documents.Queries.GetAll;
+using HelpDesk.Architecture.Application.Requests.Documents;
+using HelpDesk.Architecture.Client.Extensions;
 using MudBlazor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.Documents.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.Document;
-using BlazorHero.CleanArchitecture.Domain.Entities.Misc;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Application.Features.Documents.Commands.AddEdit;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Misc.Document;
+using HelpDesk.Architecture.Domain.Entities.Misc;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
+namespace HelpDesk.Architecture.Client.Pages.Misc
 {
     public partial class DocumentStore
     {

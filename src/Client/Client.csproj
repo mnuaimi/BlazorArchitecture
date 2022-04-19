@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-    <RootNamespace>BlazorHero.CleanArchitecture.Client</RootNamespace>
-    <AssemblyName>BlazorHero.CleanArchitecture.Client</AssemblyName>
+    <RootNamespace>HelpDesk.Architecture.Client</RootNamespace>
+    <AssemblyName>HelpDesk.Architecture.Client</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Shared\Components\BlazorHeroLogo.razor" />
+    <Content Remove="Shared\Components\HelpDeskLogo.razor" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,15 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Shared\Components\BlazorHeroLogo.razor" />
+    <UpToDateCheckInput Remove="Shared\Components\HelpDeskLogo.razor" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Shared\Components\BlazorHeroLogo.razor" />
+    <_ContentIncludedByDefault Remove="Shared\Components\HelpDeskLogo.razor" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Shared\Components\BlazorHeroLogo.razor" />
+    <None Include="Shared\Components\HelpDeskLogo.razor" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Domain.Contracts;
+using HelpDesk.Architecture.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Application.Interfaces.Repositories
+namespace HelpDesk.Architecture.Application.Interfaces.Repositories
 {
     public interface IRepositoryAsync<T, in TId> where T : class, IEntity<TId>
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlazorHero.CleanArchitecture.Application.Responses.Audit
+namespace HelpDesk.Architecture.Application.Responses.Audit
 {
     public class AuditResponse
     {

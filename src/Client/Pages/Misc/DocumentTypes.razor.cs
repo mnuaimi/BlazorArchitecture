@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.DocumentTypes.Queries.GetAll;
-using BlazorHero.CleanArchitecture.Client.Extensions;
-using BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Misc.DocumentType;
-using BlazorHero.CleanArchitecture.Shared.Constants.Application;
-using BlazorHero.CleanArchitecture.Shared.Constants.Permission;
+using HelpDesk.Architecture.Application.Features.DocumentTypes.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Features.DocumentTypes.Queries.GetAll;
+using HelpDesk.Architecture.Client.Extensions;
+using HelpDesk.Architecture.Client.Infrastructure.Managers.Misc.DocumentType;
+using HelpDesk.Architecture.Shared.Constants.Application;
+using HelpDesk.Architecture.Shared.Constants.Permission;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.JSInterop;
 using MudBlazor;
 
-namespace BlazorHero.CleanArchitecture.Client.Pages.Misc
+namespace HelpDesk.Architecture.Client.Pages.Misc
 {
     public partial class DocumentTypes
     {

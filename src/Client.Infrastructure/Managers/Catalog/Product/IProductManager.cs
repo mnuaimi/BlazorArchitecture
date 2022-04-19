@@ -1,10 +1,10 @@
-﻿using BlazorHero.CleanArchitecture.Application.Features.Products.Commands.AddEdit;
-using BlazorHero.CleanArchitecture.Application.Features.Products.Queries.GetAllPaged;
-using BlazorHero.CleanArchitecture.Application.Requests.Catalog;
-using BlazorHero.CleanArchitecture.Shared.Wrapper;
+﻿using HelpDesk.Architecture.Application.Features.Products.Commands.AddEdit;
+using HelpDesk.Architecture.Application.Features.Products.Queries.GetAllPaged;
+using HelpDesk.Architecture.Application.Requests.Catalog;
+using HelpDesk.Architecture.Shared.Wrapper;
 using System.Threading.Tasks;
 
-namespace BlazorHero.CleanArchitecture.Client.Infrastructure.Managers.Catalog.Product
+namespace HelpDesk.Architecture.Client.Infrastructure.Managers.Catalog.Product
 {
     public interface IProductManager : IManager
     {

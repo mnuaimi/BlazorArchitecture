@@ -1,4 +1,4 @@
-﻿namespace BlazorHero.CleanArchitecture.Application.Interfaces.Common
+﻿namespace HelpDesk.Architecture.Application.Interfaces.Common
 {
     public interface IService
     {

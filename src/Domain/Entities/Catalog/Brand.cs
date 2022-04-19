@@ -1,6 +1,6 @@
-﻿using BlazorHero.CleanArchitecture.Domain.Contracts;
+﻿using HelpDesk.Architecture.Domain.Contracts;
 
-namespace BlazorHero.CleanArchitecture.Domain.Entities.Catalog
+namespace HelpDesk.Architecture.Domain.Entities.Catalog
 {
     public class Brand : AuditableEntity<int>
     {
